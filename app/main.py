@@ -14,17 +14,17 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI() 
 
-while True:
-    try:
-        conn=psycopg2.connect(host='localhost', database='fastapi',
-                          user='postgres',password='1234',cursor_factory=RealDictCursor)
-        cursor= conn.cursor()
-        print('connection succesfull')
-        break
-    except Exception as error:
-        print('Connection failed ')
-        print("Error %s"%error)
-        time.sleep(5)
+# while True:
+#     try:
+#         conn=psycopg2.connect(host='localhost', database='fastapi',
+#                           user='postgres',password='1234',cursor_factory=RealDictCursor)
+#         cursor= conn.cursor()
+#         print('connection succesfull')
+#         break
+#     except Exception as error:
+#         print('Connection failed ')
+#         print("Error %s"%error)
+#         time.sleep(5)
 
 
 # def find_post(id):
